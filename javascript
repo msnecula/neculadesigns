@@ -3,7 +3,7 @@
     $.googlePlaces = function(element, options) {
 
         var defaults = {
-              placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4' // placeId provided by google api documentation
+              placeId: 'ChIJsbuTjebf3IARmGl-j3_wGN4' // placeId provided by google api documentation
             , render: ['reviews']
             , min_rating: 0
             , max_rows: 0
