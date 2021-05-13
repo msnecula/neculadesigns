@@ -79,7 +79,10 @@
           for (var i = row_count; i >= 0; i--) {
             var stars = renderStars(reviews[i].rating);
             var date = convertTime(reviews[i].time);            
-            html = html+"<div class='review-item'><div class='review-meta'><img class='reviewer-image' src='"+reviews.profile_photo_url+"' <span class='review-author'>"+reviews.author_name+"</span><span class='review-sep'> </span><span class='review-date'>"+date+"</span></div>"+stars+"<p class='review-text'>"+reviews.text+"</p></div>"
+            html = html+"<div class='review-item'>
+                         <div class='review-meta'>
+                            <span><img class='reviewer-image' src='"+reviews[i].profile_photo_url+"'</span><span class='review-author'>"+reviews[i].author_name+"</span><span class='review-sep'> </span><span class='review-date'>"+date+"</span></div>"+stars+"<p class='review-text'>"+reviews[i].text+"</p>
+                         </div>"
           };
           $element.append(html);
         }
