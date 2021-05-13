@@ -3,7 +3,7 @@
     $.googlePlaces = function(element, options) {
 
         var defaults = {
-              placeId: 'ChIJsbuTjebf3IARmGl-j3_wGN4' // placeId provided by google api documentation
+              placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4' // placeId provided by google api documentation
             , render: ['reviews']
             , min_rating: 0
             , max_rows: 0
@@ -79,10 +79,7 @@
           for (var i = row_count; i >= 0; i--) {
             var stars = renderStars(reviews[i].rating);
             var date = convertTime(reviews[i].time);            
-            html = html+"<div class='review-item'>
-                         <div class='review-meta'>
-                            <span><img class='reviewer-image' src='"+reviews[i].profile_photo_url+"'</span><span class='review-author'>"+reviews[i].author_name+"</span><span class='review-sep'> </span><span class='review-date'>"+date+"</span></div>"+stars+"<p class='review-text'>"+reviews[i].text+"</p>
-                         </div>"
+            html = html+"<div class='review-item'><div class='review-meta'><img class='reviewer-image' src='"+reviews[i].profile_photo_url+"' <span class='review-author'>"+reviews[i].author_name+"</span><span class='review-sep'> </span><span class='review-date'>"+date+"</span></div>"+stars+"<p class='review-text'>"+reviews[i].text+"</p></div>"
           };
           $element.append(html);
         }
